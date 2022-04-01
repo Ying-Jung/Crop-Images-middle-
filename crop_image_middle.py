@@ -17,8 +17,9 @@ def splitmid(pngfile,outdir):
     crop_h1 = int((3/4)*h)
     crop_w  = int((1/4)*w)
     crop_w1 = int((3/4)*w)
-
-    crop_img = img[crop_h : crop_h1 , crop_w :crop_w1 ] # [y:y1, x:x1]
+    
+    # [y:y1, x:x1]
+    crop_img = img[crop_h : crop_h1 , crop_w :crop_w1 ] 
 
     name = os.path.splitext(os.path.basename(pngfile))
     newname = name[0]+".png"
